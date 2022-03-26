@@ -1,5 +1,6 @@
 package array;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class CD {
 
@@ -15,7 +16,7 @@ public class CD {
     }
 
     public String toString() {
-        NumberFormat fmt = NumberFormat.getCurrencyInstance();
-        return fmt.format(cost) + "\t" + tracks + "\t" + title + "\t" + artist;
+        NumberFormat fmt = NumberFormat.getCurrencyInstance(Locale.US);
+        return fmt.format(cost) + "\t" + tracks + "\t" + title + "\t" +artist;
     }
 }

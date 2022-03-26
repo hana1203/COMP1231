@@ -11,5 +11,6 @@ public class CDTunes {
         music.addCD("Double Live", "Garth Brooks", 19.99, 26);
         music.addCD("Greatest Hits", "Jimmy Buffet", 15.95, 13);
         System.out.println(music);
+
     }
 }

@@ -15,13 +15,19 @@ public class P6Account {
     public double deposit(double amount) {
         if (amount>0) {
             balance += amount;
-        } return balance;
+            addInterest();
+        } else
+            System.out.println("Warning: invalid deposit");
+        return balance;
     }
 
     public double withdraw(double amount, double fee) {
         if (amount+fee>0 && amount+fee<balance) {
             balance = balance - amount - fee;
-        } return balance;
+            addInterest();
+        } else
+            System.out.println("Warning: invalid withdraw");
+        return balance;
     }
 
     public double addInterest() {
@@ -30,14 +36,17 @@ public class P6Account {
     }
 
     public String showAccountInfo() {
-        return "Account holder: " + name + "\t Account number: " + accNumber + "\t balance: " + balance;
+        return "Account holder: " + name + "\t\tAccount number: " + accNumber + "\t\tBalance: " + balance;
     }
 
     public static void main(String[] args) {
         P6Account[] customer = new P6Account[30];
         customer[0] = new P6Account("taeyeon", 10021, 50000);
-//        customer[0].deposit(10000);
-        customer[0].showAccountInfo();
+        customer[0].deposit(10000);
+        System.out.println(customer[0].showAccountInfo());
+        customer[1] = new P6Account("tiffany", 10022, 10000);
+        customer[1].deposit(10000);
+        System.out.println(customer[1].showAccountInfo());
 
     }
 }

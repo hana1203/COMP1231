@@ -1,17 +1,17 @@
-package array;
+package array.p6;
 
-public class P6Bank {
+public class Bank {
     private int count;
     private final double interestRate = 0.03;
-    private P6Account accounts[];
+    private Account accounts[];
 
-    public P6Bank() {
-        accounts = new P6Account[30];
+    public Bank() {
+        accounts = new Account[30];
         count=0;
     }
 
     public void createAccount(String name, long accNumber, double balance) {
-        accounts[count] = new P6Account(name, accNumber, balance);
+        accounts[count] = new Account(name, accNumber, balance);
         count++;
         if (count > 30)
             System.out.println("Warning: cannot create more than 30 bank account");
@@ -25,7 +25,7 @@ public class P6Bank {
         } return -1;
     }
 
-    public P6Account getAccount(long accNumber) {
+    public Account getAccount(long accNumber) {
         int index = accountIndex(accNumber);
         return accounts[index];
     }

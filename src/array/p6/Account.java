@@ -1,12 +1,12 @@
-package array;
+package array.p6;
 
-public class P6Account {
+public class Account {
     private String name;
     private long accNumber;
     private double balance;
 
 
-    public P6Account(String name, long accNumber, double balance){
+    public Account(String name, long accNumber, double balance){
         this.name= name;
         this.accNumber= accNumber;
         this.balance = balance;

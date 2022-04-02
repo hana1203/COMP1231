@@ -4,7 +4,7 @@ Design and implement a class called Card that represents a standard playing card
 Each card has a suit and a face value. Create a program that deals five random cards.
 A standard 52-card deck comprises 13 ranks in each of the four French suits
 : clubs (♣), diamonds (♦), hearts (♥), and spades (♠)
-4개 suits 는 각각 1-13 까지의 값 가지고있음. 1-10, Jack, Queen, King
+4개 suits 는 각각 1-13 까지의 face 값 가지고있음. 1-10, Jack, Queen, King
 
 hint:
 Represent the faces/ranks of Ace through King as 1 through 13 and the suits as 1 through 4.
@@ -21,17 +21,27 @@ Create a driver class with a main method that deals each card from a shuffled de
 
 import java.util.Random;
 public class Card {
+    private final int numOfSuit =4;
+    private final int numOfFace = 13;
     private int suit;
     private int face;
     public Card() {
         Random rand = new Random();
-        suit = rand.nextInt(4)+1; //1~4
-        face = rand.nextInt(13)+1; //1~13
+        suit = rand.nextInt(numOfSuit)+1; //1~4
+        face = rand.nextInt(numOfFace)+1; //1~13
     }
 
     public Card(int suit, int face) {
         this.suit = suit;
         this.face = face;
+    }
+
+    public int getNumOfSuit() {
+        return numOfSuit;
+    }
+
+    public int getNumOfFace() {
+        return numOfFace;
     }
 
     public int getSuit() {

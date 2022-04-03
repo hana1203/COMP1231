@@ -7,6 +7,33 @@ Create a driver class to instantiate and compute the sum of several monetary coi
 Demonstrate that a monetary coin can inherit its parent’s ability to be flipped.
  */
 public class MonetaryCoin extends Coin{
+    private int value;
+
+    //  Sets up a coin with a value.
+    public MonetaryCoin(int money) {
+//        super();
+        value = money;
+    }
+
+    //  Sets the value of the coin.
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    //  Returns the current value of the coin.
+    public int getValue() {
+        return value;
+    }
+    //  Returns a description of this coin as a string.
+    public String toString() {
+        String result;
+        result = super.toString();
+        result += value;
+        return result;
+    }
+
+
+    /*
     public MonetaryCoin() {
         super();
     }
@@ -31,4 +58,5 @@ public class MonetaryCoin extends Coin{
         System.out.println("Sum of MonetaryCoins: ");
         System.out.println(mcoin.getValue() + mcoin1.getValue() + mcoin2.getValue());
     }
+     */
 }

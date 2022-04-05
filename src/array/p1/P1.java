@@ -1,4 +1,4 @@
-package array;
+package array.p1;
 
 import java.util.Scanner;
 //아무런 숫자 받는 프로그램인데 0부터 50까지 숫자가 몇개 들어있는지 세기

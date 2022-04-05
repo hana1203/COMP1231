@@ -2,11 +2,13 @@ package inheritance.Assignment1;
 
 public class Cube extends ThreeDShape {
 
+    // Set up only 1 parameter, as Cube is the 3D shape having the same length and height.
     public Cube(int length) {
         super(length, length);
         name = "Cube";
     }
 
+    // Override the parent class's get, set method to access and modify the length.
     @Override
     public int getLength() {
         return super.getLength();

@@ -30,6 +30,11 @@ public class DeckOfCards {
                 System.out.println(deckOfCards[k]);
                 k++;
             }
+
+//        public Card shuffle() {
+//                int randomNum = (int)Math.random()*53;
+//        }
+
     }
 
     public static void main(String[] args) {

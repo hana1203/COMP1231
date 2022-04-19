@@ -12,6 +12,14 @@ public class ProductCodes {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter product code (STOP to quit): ");
         code = scan.nextLine();
+        //testing code
+        /*
+        TRV2475A5R-14 //banned
+        TRD1704A7R-12 //normal
+        TRL2k74A5R-11 //parseInt 의 substring 이 integer 없을때 NumberFormat 에러
+        TRV2105A2 //CharAt 이나 parseInt 의 substring 메서드 StringIndexOutofBounds 오류
+        TRQ2778A7R-19 //banned
+         */
 
         while (!code.equals("STOP")) {
             try {

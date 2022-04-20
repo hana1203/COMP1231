@@ -8,7 +8,8 @@ public class ExceptionScope {
         try {
             level2();
         } catch (ArithmeticException e) {
-            System.out.println("\nThe exception msg is: "+ e.getMessage());
+            System.out.println();
+            System.out.println("The exception msg is: "+ e.getMessage());
             System.out.println("The call stack trace: ");
             e.printStackTrace();
             System.out.println();

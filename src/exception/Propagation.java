@@ -10,7 +10,10 @@ public class Propagation {
         System.out.println("Program ending.");
 
         //output
-        /* 아무리바꿔도 call stack trace 가 Program ending. 찍히고 맨 마지막에 나온다...
+        /* 교재에는
+        The exception message is: / by zero
+        call stack trace:  이후에 익셉션 메시지 뜨는데
+        코드로는 Program ending. 찍히고 맨 마지막에 나온다.
 Program beginning.
 Level 1 beginning.
 Level 2 beginning.

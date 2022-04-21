@@ -2,9 +2,10 @@ package exception;
 
 import java.util.Scanner;
 
+//Demonstrates the ability to define an exception via inheritance.
 public class CreatingException {
-    //Creates an exception object and possibly throws it.
 
+    //Creates an exception object and possibly throws it.
     public static void main(String[] args) throws OutofRangeException {
         final int MIN = 25, MAX = 40;
 
@@ -13,6 +14,7 @@ public class CreatingException {
         System.out.println("Enter an integer value between " + MIN + " and " + MAX + ", inclusive: ");
         int value = scan.nextInt();
 
+        //Determine if the exception should be thrown.
         if (value < MIN || value> MAX)
             throw problem;
 

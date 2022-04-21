@@ -18,13 +18,14 @@ public class ExceptionScope {
         //Lab3. What if the try statement were removed?
         System.out.println("Level 1 beginning.");
         level2();
-        //level2() 에서 익셉션 처리 안해줬기때문에 3 시작부분까지만 찍히고 익셉션 stack trace 메시지만.
+
         /*
+        level2() 에서 익셉션 처리 안해줬기때문에 3 시작부분까지만 찍히고 익셉션 stack trace 메시지찍히고 강제종료.
         Program beginning.
         Level 1 beginning.
         Level 2 beginning.
         Level 3 beginning.
-        level2();
+        Exception in thread "main" java.lang.ArithmeticException
          */
 
         System.out.println("Level 1 ending.");
